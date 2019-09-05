@@ -17,6 +17,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'html-loader',
@@ -25,6 +26,11 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },

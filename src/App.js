@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
+
+import Routes from './Routes';
+
+import './global.scss';
 
 const App = () => {
-  return (
-    <div>
-      <p>Bem-vindo a sua nova app!</p>
-    </div>
-  );
+  return <Routes />;
 };
 
 export default App;
