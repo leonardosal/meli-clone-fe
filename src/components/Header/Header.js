@@ -4,10 +4,10 @@ import './header.scss';
 
 const Header = ({ query, onChange, onSubmit }) => (
   <header className="header">
-    <div className="header-box">
+    <div className="box">
       <img
         className="logo"
-        src="https://http2.mlstatic.com/ui/navigation/4.5.2/mercadolibre/logo__large_plus@2x.png"
+        src="https://meli-challenge.s3.amazonaws.com/Logo_ML%402x.png"
         alt="logo"
       />
       <form onSubmit={onSubmit}>

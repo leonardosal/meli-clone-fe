@@ -4,22 +4,23 @@
   display: flex;
   align-items: center;
 
-  .header-box {
+  > .box {
     width: 800px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-  }
 
-  img.logo {
-    width: 134px;
-    height: 34px;
-    margin-right: 16px;
-  }
+    > .logo {
+      width: 60px;
+      height: 35px;
+      margin-right: 16px;
+    }
 
-  input.search-input {
-    font-size: 16px;
-    width: 600px;
-    height: 35px;
+    > form .search-input {
+      font-size: 16px;
+      width: 720px;
+      height: 35px;
+      padding: 8px;
+    }
   }
 }
