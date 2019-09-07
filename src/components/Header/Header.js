@@ -1,6 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import './header.scss';
+import './Header.scss';
+
+import Searchbar from '../Searchbar';
 
 const Header = ({ query, onChange, onSubmit }) => (
   <header className="header">
@@ -10,15 +13,19 @@ const Header = ({ query, onChange, onSubmit }) => (
         src="https://meli-challenge.s3.amazonaws.com/Logo_ML%402x.png"
         alt="logo"
       />
-      <form onSubmit={onSubmit}>
-        <input
-          className="search-input"
-          value={query}
-          onChange={e => onChange(e.target.value)}
-        />
-      </form>
+      <Searchbar query={query} onChange={onChange} onSubmit={onSubmit} />
     </div>
   </header>
 );
+
+Header.propTypes = {
+  query: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};
+
+Header.defaultProps = {
+  query: '',
+};
 
 export default Header;

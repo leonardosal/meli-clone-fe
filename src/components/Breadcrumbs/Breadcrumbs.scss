@@ -1,0 +1,30 @@
+.nav {
+  width: 800px;
+  padding: 16px 0px;
+
+  > .list {
+    display: flex;
+    flex-direction: row;
+
+    > .item {
+      list-style: none;
+      font-size: 14px;
+      color: #999999;
+      & + ::before {
+        position: relative;
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-right: 1px solid #999999;
+        border-top: 1px solid #999999;
+        transform: rotate(45deg);
+        margin: 0 8px;
+      }
+      &:last-child {
+        color: #666666;
+        font-weight: bold;
+      }
+    }
+  }
+}
