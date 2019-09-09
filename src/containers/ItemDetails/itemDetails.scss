@@ -1,0 +1,57 @@
+@import '../../styles/variables.scss';
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 32px;
+
+  > .product-image {
+    padding: 32px 0px;
+    max-width: 340px;
+  }
+
+  .buy-info-container {
+    padding: 32px 0px;
+    margin-left: 54px;
+
+    > .title {
+      width: 250px;
+      font-size: 24px;
+    }
+
+    > .price {
+      font-size: 46px;
+      padding: 32px 0px;
+    }
+
+    > .button {
+      width: 100%;
+      background-color: #3483fa;
+      color: #fff;
+      height: 50px;
+      border: 0px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    > .sold-quantity {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.description-container {
+  padding: 32px 32px;
+
+  > .description-title {
+    margin-bottom: 32px;
+    font-size: 28px;
+    font-weight: normal;
+  }
+  > .description {
+    font-size: 16px;
+    font-weight: normal;
+    width: 50%;
+  }
+}
