@@ -22,6 +22,7 @@
 
     > .price {
       font-size: 46px;
+      font-weight: normal;
       padding: 32px 0px;
     }
 
@@ -41,6 +42,7 @@
     }
 
     > .sold-quantity {
+      font-weight: normal;
       font-size: 14px;
       margin-bottom: 16px;
     }
@@ -58,6 +60,7 @@
   > .description {
     font-size: 16px;
     font-weight: normal;
+    color: #999999;
     width: 50%;
   }
 }
