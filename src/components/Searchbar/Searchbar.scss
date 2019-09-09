@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .searchbar {
   display: flex;
   flex-direction: row;
@@ -16,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #eeeeee;
+    background-color: $light-gray;
 
     > .icon {
       position: absolute;

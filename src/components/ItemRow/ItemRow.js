@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './ItemRow.scss';
 
 import PropTypes from 'prop-types';
 
-const ItemRow = ({ price, title, picture, freeShipping }) => (
-  <div className="row">
+const ItemRow = ({ id, price, title, picture, freeShipping }) => (
+  <Link className="row" to={`/items/${id}`}>
     <div className="content-box">
       <img className="picture" src={picture} alt="foto do produto" />
       <div className="title-container">
@@ -17,6 +18,7 @@ const ItemRow = ({ price, title, picture, freeShipping }) => (
               currency: price.currency,
             })}
           </h2>
+
           {freeShipping && (
             <img
               className="free-shipping-icon"
@@ -25,14 +27,16 @@ const ItemRow = ({ price, title, picture, freeShipping }) => (
             />
           )}
         </div>
+
         <h5 className="subtitle">{title}</h5>
       </div>
     </div>
-    <h5 className="location">São Paulo</h5>
-  </div>
+    <h5 className="location">Buenos Aires</h5>
+  </Link>
 );
 
 ItemRow.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string,
   picture: PropTypes.string,
   freeShipping: PropTypes.bool,
@@ -44,6 +48,7 @@ ItemRow.propTypes = {
 };
 
 ItemRow.defaultProps = {
+  id: '',
   freeShipping: false,
   title: '',
   picture: '',

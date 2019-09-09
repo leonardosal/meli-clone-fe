@@ -22,10 +22,14 @@ Header.propTypes = {
   query: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }),
 };
 
 Header.defaultProps = {
   query: '',
+  history: {},
 };
 
 export default Header;

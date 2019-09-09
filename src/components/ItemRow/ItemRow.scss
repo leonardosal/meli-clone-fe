@@ -1,31 +1,24 @@
+@import '../../styles/animations.scss';
+@import '../../styles/variables.scss';
+
 .row {
   padding: 16px 32px 16px 16px;
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $light-gray;
   align-items: center;
   justify-content: space-between;
-  animation-name: basicMotion;
+  animation-name: motion;
   animation-duration: 0.2s;
   animation-timing-function: ease-in-out;
   animation-delay: 0;
   opacity: 0;
   animation-fill-mode: forwards;
 
-  &:nth-child(1) {
-    animation-delay: 0.1s;
-  }
-
-  &:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-
-  &:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-
-  &:nth-child(4) {
-    animation-delay: 0.4s;
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * 0.1s;
+    }
   }
 
   > .content-box {
@@ -51,6 +44,7 @@
         > .price {
           font-size: 24px;
           font-weight: normal;
+          color: $black;
         }
 
         > .free-shipping-icon {
@@ -64,6 +58,7 @@
         font-size: 18px;
         font-weight: normal;
         max-width: 550px;
+        color: $black;
       }
     }
   }
@@ -72,16 +67,6 @@
     font-size: 12px;
     font-weight: normal;
     align-self: flex-start;
-  }
-}
-
-@keyframes basicMotion {
-  0% {
-    transform: translateY(100px);
-  }
-
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
+    color: $black;
   }
 }

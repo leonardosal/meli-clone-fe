@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
+    "qs": "^6.8.0",
     "react": "^16.9.0",
     "react-content-loader": "^4.2.2",
     "react-dom": "^16.9.0",

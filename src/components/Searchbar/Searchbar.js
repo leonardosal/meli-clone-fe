@@ -1,10 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { withRouter } from 'react-router-dom';
+
 import './Searchbar.scss';
 
-const Searchbar = ({ query, onChange, onSubmit }) => (
-  <form className="searchbar" onSubmit={onSubmit}>
+const Searchbar = ({ query, onChange, onSubmit, history }) => (
+  <form
+    className="searchbar"
+    onSubmit={e => {
+      e.preventDefault();
+      history.push(`/items?search=${query}`);
+      onSubmit(query);
+    }}
+  >
     <input
       className="search-input"
       value={query}
@@ -30,4 +39,4 @@ Searchbar.defaultProps = {
   query: '',
 };
 
-export default Searchbar;
+export default withRouter(Searchbar);

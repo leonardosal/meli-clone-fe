@@ -1,28 +1,31 @@
+@import '../../styles/variables.scss';
+
 .nav {
-  width: 800px;
   padding: 16px 0px;
+  display: flex;
+  justify-content: center;
 
   > .list {
     display: flex;
     flex-direction: row;
-
+    width: 800px;
     > .item {
       list-style: none;
       font-size: 14px;
-      color: #999999;
+      color: $gray;
       & + ::before {
         position: relative;
         content: '';
         display: inline-block;
         width: 6px;
         height: 6px;
-        border-right: 1px solid #999999;
-        border-top: 1px solid #999999;
+        border-right: 1px solid $gray;
+        border-top: 1px solid $gray;
         transform: rotate(45deg);
         margin: 0 8px;
       }
       &:last-child {
-        color: #666666;
+        color: $dark-gray;
         font-weight: bold;
       }
     }
