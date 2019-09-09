@@ -1,3 +1,3 @@
-import Loader from './Loader';
+import { LoaderList, LoaderDetail } from './Loader';
 
-export default Loader;
+export { LoaderList, LoaderDetail };

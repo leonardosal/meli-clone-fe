@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import qs from 'qs';
 
 import ItemRow from '../../components/ItemRow';
-import Loader from '../../components/Loader';
+import { LoaderList } from '../../components/Loader';
 
 import { Container, Panel } from '../../components/Wrappers';
 
@@ -37,7 +37,7 @@ class ItemsSearch extends PureComponent {
               />
             ))
           ) : (
-            <Loader />
+            <LoaderList />
           )}
         </Panel>
       </Container>

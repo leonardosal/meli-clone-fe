@@ -12,7 +12,7 @@ const ItemRow = ({ id, price, title, picture, freeShipping }) => (
       <div className="title-container">
         <div className="title">
           <h2 className="price">
-            {(price.amount + price.decimals).toLocaleString('pt-BR', {
+            {(price.amount + price.decimals).toLocaleString('es', {
               minimumFractionDigits: 2,
               style: 'currency',
               currency: price.currency,

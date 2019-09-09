@@ -19,6 +19,11 @@
     align-items: center;
     justify-content: center;
     background-color: $light-gray;
+    cursor: pointer;
+
+    &:active {
+      background-color: #ccc;
+    }
 
     > .icon {
       position: absolute;
