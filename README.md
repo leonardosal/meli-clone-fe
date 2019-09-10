@@ -33,7 +33,7 @@ $ npm start ou yarn start
 
 ## Rodar testes
 
-(Fiz a configuração do ambiente mas não conseguir escrever os testes)
+(Fiz a configuração do ambiente mas não conseguir tempo para escrever os testes unitários)
 
 ```
 $ npm test ou yarn test
