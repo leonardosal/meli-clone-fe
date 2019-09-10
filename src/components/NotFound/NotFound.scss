@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.container {
+  justify-content: center;
+  align-items: center;
+
+  > .label {
+    color: $gray;
+  }
+}

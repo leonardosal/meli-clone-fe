@@ -47,6 +47,10 @@ class ItemsSearch extends PureComponent {
 
 ItemsSearch.propTypes = {
   loading: PropTypes.bool,
+  location: PropTypes.shape({
+    search: '',
+  }).isRequired,
+  onSubmit: PropTypes.func.isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,

@@ -33,6 +33,9 @@ Searchbar.propTypes = {
   query: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
 };
 
 Searchbar.defaultProps = {

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 import { Container, Panel } from '../../components/Wrappers';
 
@@ -16,11 +17,12 @@ export default class ItemDetails extends PureComponent {
   }
 
   async componentDidMount() {
+    const { match } = this.props;
     this.setState({
       loading: true,
     });
     const resp = await fetch(
-      `https://challenge-meli.herokuapp.com/items/${this.props.match.params.id}`
+      `https://challenge-meli.herokuapp.com/items/${match.params.id}`
     );
     const respJson = await resp.json();
 
@@ -80,3 +82,19 @@ export default class ItemDetails extends PureComponent {
     );
   }
 }
+
+ItemDetails.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string,
+    }),
+  }),
+};
+
+ItemDetails.defaultProps = {
+  match: {
+    params: {
+      id: '',
+    },
+  },
+};
