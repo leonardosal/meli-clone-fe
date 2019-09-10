@@ -26,9 +26,7 @@ class App extends Component {
       loading: true,
     });
 
-    const resp = await fetch(
-      `https://challenge-meli.herokuapp.com/items?q=${query}`
-    );
+    const resp = await fetch(`${process.env.API_URL}/items?q=${query}`);
     const respJson = await resp.json();
 
     this.setState({

@@ -21,9 +21,7 @@ export default class ItemDetails extends PureComponent {
     this.setState({
       loading: true,
     });
-    const resp = await fetch(
-      `https://challenge-meli.herokuapp.com/items/${match.params.id}`
-    );
+    const resp = await fetch(`${process.env.API_URL}/items/${match.params.id}`);
     const respJson = await resp.json();
 
     this.setState({

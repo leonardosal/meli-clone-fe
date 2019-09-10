@@ -1,7 +1,8 @@
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+module.exports = env => ({
   output: {
     publicPath: '/',
     path: path.resolve(__dirname, 'build'),
@@ -40,5 +41,8 @@ module.exports = {
       template: './public/index.html',
       filename: './index.html',
     }),
+    new webpack.DefinePlugin({
+      'process.env.API_URL': JSON.stringify(env.API_URL),
+    }),
   ],
-};
+});

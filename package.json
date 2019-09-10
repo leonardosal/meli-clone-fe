@@ -6,8 +6,8 @@
   "author": "Leonardo Almeida",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --history-api-fallback --open --mode development",
-    "build": "webpack --mode production",
+    "start": "webpack-dev-server --history-api-fallback --open --mode development --env.API_URL=http://localhost:3001",
+    "build": "webpack --mode production --env.API_URL=https://challenge-meli.herokuapp.com",
     "test": "jest"
   },
   "dependencies": {
