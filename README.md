@@ -25,7 +25,9 @@ $ cd challenge-fe-meli
 $ npm install ou yarn install
 ```
 
-## Rodando a aplicação
+## Rodando a aplicação localmente
+
+É um requisito executar o backend(BFF) localmente antes de rodar o frontend.
 
 ```
 $ npm start ou yarn start
