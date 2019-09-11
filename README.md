@@ -1,5 +1,7 @@
 ## Meli FE challenge
 
+[![Build Status](https://travis-ci.org/leonardosal/challenge-fe-meli.svg?branch=master)](https://travis-ci.org/leonardosal/challenge-be-meli)
+[![codecov](https://codecov.io/gh/leonardosal/challenge-fe-meli/branch/master/graph/badge.svg)](https://codecov.io/gh/leonardosal/challenge-fe-meli)
 [![License](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
 
 ## Aplicação rodando no Heroku
@@ -34,8 +36,6 @@ $ npm start ou yarn start
 ```
 
 ## Rodar testes
-
-(Fiz a configuração do ambiente mas não conseguir tempo para escrever os testes unitários)
 
 ```
 $ npm test ou yarn test
