@@ -1,14 +1,20 @@
 @import '../../styles/variables.scss';
 
 .nav {
-  padding: 16px 0px;
+  padding: 16px 16px;
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  max-width: 800px;
+
+  @media (min-width: 800px) {
+    min-width: 800px;
+    padding: 16px 0px;
+  }
 
   > .list {
     display: flex;
     flex-direction: row;
-    width: 800px;
+
     > .item {
       list-style: none;
       font-size: 14px;

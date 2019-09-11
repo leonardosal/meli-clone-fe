@@ -6,9 +6,13 @@
   align-items: center;
   padding: 0 16px;
   margin-bottom: 16px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .panel {
   background-color: $white;
-  width: 800px;
+  @media (min-width: 800px) {
+    min-width: 800px;
+  }
 }

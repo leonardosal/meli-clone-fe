@@ -30,6 +30,19 @@ export default class ItemDetails extends PureComponent {
     });
   }
 
+  formatPrice = ({ amount, decimals, currency }) => {
+    return (amount + decimals).toLocaleString('es', {
+      minimumFractionDigits: 2,
+      style: 'currency',
+      currency,
+    });
+  };
+
+  formatText = (condition, soldQuantity) => {
+    const quantity = soldQuantity ? `- ${soldQuantity} vendidos` : '';
+    return `${condition} ${quantity} `;
+  };
+
   render() {
     const { item, loading } = this.state;
     return (
@@ -47,22 +60,11 @@ export default class ItemDetails extends PureComponent {
                 />
                 <div className="buy-info-container">
                   <h5 className="sold-quantity">
-                    {`${item.condition} `}
-                    {item.sold_quantity
-                      ? `- ${item.sold_quantity} vendidos`
-                      : ''}
+                    {this.formatText(item.condition, item.sold_quantity)}
                   </h5>
                   <h3 className="title">{item.title}</h3>
                   <h2 className="price">
-                    {item.price &&
-                      (item.price.amount + item.price.decimals).toLocaleString(
-                        'es',
-                        {
-                          minimumFractionDigits: 2,
-                          style: 'currency',
-                          currency: item.price.currency,
-                        }
-                      )}
+                    {item.price && this.formatPrice(item.price)}
                   </h2>
                   <button className="button" type="button">
                     Comprar

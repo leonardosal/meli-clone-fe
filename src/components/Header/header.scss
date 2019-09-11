@@ -5,12 +5,18 @@
   background-color: $primary;
   display: flex;
   align-items: center;
+  padding: 0px 16px;
 
   > .box {
     width: 800px;
     margin: 0 auto;
     display: flex;
     align-items: center;
+
+    @media (min-width: 800px) {
+      min-width: 800px;
+      padding: 0px;
+    }
 
     > .link {
       > .logo {
@@ -19,5 +25,8 @@
         margin-right: 16px;
       }
     }
+  }
+
+  @media (max-width: 0px) {
   }
 }

@@ -2,21 +2,36 @@
 
 .content {
   display: flex;
-  flex-direction: row;
   margin: 0px 32px;
   justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
 
   > .product-image {
     padding: 32px 0px;
     max-width: 340px;
+    margin: 0 auto;
+
+    @media (min-width: 800px) {
+      margin: 0;
+    }
   }
 
   .buy-info-container {
     padding: 32px 0px;
-    margin-left: 54px;
+
+    @media (min-width: 800px) {
+      margin-left: 54px;
+
+      > .title {
+        width: 250px;
+      }
+    }
 
     > .title {
-      width: 250px;
       font-size: 24px;
     }
 
@@ -61,6 +76,9 @@
     font-size: 16px;
     font-weight: normal;
     color: #999999;
-    width: 50%;
+
+    @media (min-width: 800px) {
+      width: 50%;
+    }
   }
 }
