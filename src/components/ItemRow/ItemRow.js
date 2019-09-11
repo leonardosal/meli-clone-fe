@@ -5,22 +5,27 @@ import './ItemRow.scss';
 
 import PropTypes from 'prop-types';
 
+const formatPrice = ({ amount, decimals, currency }) => {
+  return (amount + decimals).toLocaleString('es', {
+    minimumFractionDigits: 2,
+    style: 'currency',
+    currency,
+  });
+};
+
 const ItemRow = ({ id, price, title, picture, freeShipping }) => (
   <Link className="row" to={`/items/${id}`}>
     <div className="content-box">
       <img className="picture" src={picture} alt="foto do produto" />
       <div className="title-container">
         <div className="title">
-          <h2 className="price">
-            {(price.amount + price.decimals).toLocaleString('es', {
-              minimumFractionDigits: 2,
-              style: 'currency',
-              currency: price.currency,
-            })}
+          <h2 className="price" data-testid="price">
+            {formatPrice(price)}
           </h2>
 
           {freeShipping && (
             <img
+              data-testid="freeShippingImg"
               className="free-shipping-icon"
               src="https://meli-challenge.s3.amazonaws.com/ic_shipping%402x.png"
               alt="ícone de frete grátis"

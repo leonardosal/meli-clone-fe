@@ -5,7 +5,7 @@ import './Breadcrumbs.scss';
 
 const Breadcrumbs = ({ categories }) => (
   <nav className="nav">
-    <ul className="list">
+    <ul className="list" data-testid="categories-list">
       {categories.map(item => (
         <li key={item} className="item">
           {item}

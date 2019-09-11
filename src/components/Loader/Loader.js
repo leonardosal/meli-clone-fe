@@ -32,7 +32,7 @@ const DetailLoader = () => (
 );
 
 export const LoaderList = () => (
-  <div className="loader">
+  <div className="loader" data-testid="LoaderList">
     <ItemLoader />
     <ItemLoader />
     <ItemLoader />
@@ -41,7 +41,7 @@ export const LoaderList = () => (
 );
 
 export const LoaderDetail = () => (
-  <div className="loader">
+  <div className="loader" data-testid="LoaderDetails">
     <DetailLoader />
   </div>
 );

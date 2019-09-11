@@ -7,7 +7,7 @@ import './header.scss';
 import Searchbar from '../Searchbar';
 
 const Header = ({ query, onChange, onSubmit }) => (
-  <header className="header">
+  <header className="header" data-testid="header">
     <div className="box">
       <Link className="link" to="/">
         <img
@@ -25,14 +25,10 @@ Header.propTypes = {
   query: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
-  history: PropTypes.shape({
-    push: PropTypes.func,
-  }),
 };
 
 Header.defaultProps = {
   query: '',
-  history: {},
 };
 
 export default Header;

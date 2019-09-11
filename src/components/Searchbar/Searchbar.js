@@ -16,6 +16,7 @@ const Searchbar = ({ query, onChange, onSubmit, history }) => (
   >
     <input
       className="search-input"
+      data-testid="search-input"
       value={query}
       onChange={e => onChange(e.target.value)}
     />
