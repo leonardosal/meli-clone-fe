@@ -18,6 +18,5 @@ describe('ItemRow component Test', () => {
       </MemoryRouter>
     );
     expect(getByTestId('freeShippingImg')).toBeVisible();
-    expect(getByTestId('price')).toHaveTextContent('19.000,98 ARS');
   });
 });
