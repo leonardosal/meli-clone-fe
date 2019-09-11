@@ -8,7 +8,7 @@
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --open --mode development --env.API_URL=http://localhost:3001",
     "build": "webpack --mode production --env.API_URL=https://challenge-meli.herokuapp.com",
-    "test": "jest"
+    "test": "jest && codecov"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -31,6 +31,7 @@
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "codecov": "^3.5.0",
     "css-loader": "^3.2.0",
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",
