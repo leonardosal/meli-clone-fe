@@ -6,7 +6,7 @@
 
 ## Aplicação rodando no Heroku
 
-[Meli Frontend ](https://challenge-fe-meli.herokuapp.com)
+[Meli Frontend ](https://meli-clone-fe.herokuapp.com)
 (Ao acessar pela primeira vez pode demorar alguns segundos por conta das máquinas free do heroku)
 
 ## Backend da aplicação
