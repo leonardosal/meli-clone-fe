@@ -37,8 +37,6 @@ $ npm start ou yarn start
 
 ## Rodar testes
 
-(Fiz alguns testes unitários mas por conta de tempo não pude concluir.)
-
 ```
 $ npm test ou yarn test
 ```
