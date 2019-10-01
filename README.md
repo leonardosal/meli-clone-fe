@@ -1,4 +1,4 @@
-## Meli FE challenge
+## Meli Clone FE
 
 [![Build Status](https://travis-ci.org/leonardosal/challenge-fe-meli.svg?branch=master)](https://travis-ci.org/leonardosal/challenge-be-meli)
 [![codecov](https://codecov.io/gh/leonardosal/challenge-fe-meli/branch/master/graph/badge.svg)](https://codecov.io/gh/leonardosal/challenge-fe-meli)
